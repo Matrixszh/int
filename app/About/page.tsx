@@ -16,7 +16,7 @@ export default function Home() {
           muted
           playsInline
         >
-          <source src="./harshintvid.mp4" type="video/mp4" />
+          <source src="./harhintvid.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
         <video
@@ -26,7 +26,7 @@ export default function Home() {
           muted
           playsInline
         >
-          <source src="./harshintvid.mp4" type="video/mp4" />
+          <source src="./harhintvid.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
 
