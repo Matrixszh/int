@@ -16,10 +16,10 @@ interface Project {
 }
 
 const projects: Project[] = [
-  { name: "Chic Living Room", image: img1, link: "/Commercial" },
-  { name: "Cozy Seating", image: img2, link: "/Commercial" },
-  { name: "Urban Kitchen", image: img3, link: "/Commercial" },
-  { name: "Spacious Closet", image: img4, link: "/Commercial" },
+  { name: "Residential", image: img1, link: "/Commercial" },
+  { name: "Cmmercial", image: img2, link: "/Commercial" },
+  { name: "Outdoors", image: img3, link: "/Commercial" },
+  { name: "Indoors", image: img4, link: "/Commercial" },
 ];
 
 const LatestProjects: React.FC = () => {
