@@ -12,26 +12,15 @@ const NavBar: React.FC = () => {
   const menuItemsRef = useRef<(HTMLDivElement | null)[]>([]);
 
   const items = [
-    { item: "HOME", id: "intro_main" },
-    { item: "PROCESS", id: "process_sec" },
-    { item: "LOANS", id: "loan_sec" },
-    { item: "CONTACT", id: "form_section" },
+    { item: "HOME", path: "/" },
+    { item: "ABOUT", path: "/About" },
+    { item: "PORTFOLIO", path: "/Portfolio" },
+    { item: "CONTACT", path: "/ContactUs" },
   ];
 
-  const toggleMenu = (targetSectionId?: string) => {
+  const toggleMenu = () => {
     setIsMenuOpen((prev) => !prev);
     setIsBodyLocked((prev) => !prev);
-
-    if (targetSectionId) {
-      scrollToSection(targetSectionId);
-    }
-  };
-
-  const scrollToSection = (targetSectionId: string) => {
-    const section = document.getElementById(targetSectionId);
-    if (section) {
-      section.scrollIntoView({ behavior: "smooth" });
-    }
   };
 
   useEffect(() => {
@@ -69,13 +58,12 @@ const NavBar: React.FC = () => {
       <div className=" h-full flex items-center w-[100%] mx-auto">
         <div className="flex items-center lg:space-x-10 w-full lg:justify-center h-full rounded-full">
           {items.slice(0, 2).map((item, index) => (
-            <div key={index} className="hidden lg:block w-full ">
-              <button
-                className="text-lg font-medium nav-font hover:bg-[#69BF06] transition-colors w-full rounded-full h-[60px] "
-                onClick={() => scrollToSection(item.id)}
-              >
-                {item.item}
-              </button>
+            <div key={index} className="hidden lg:block w-full">
+              <Link href={item.path}>
+                <button className="text-lg font-medium nav-font hover:bg-[#69BF06] transition-colors w-full rounded-full h-[60px]">
+                  {item.item}
+                </button>
+              </Link>
             </div>
           ))}
           <div className="lg:hidden pl-4">
@@ -101,19 +89,16 @@ const NavBar: React.FC = () => {
         <div className="flex items-center space-x-10 w-full justify-center h-full rounded-full">
           {items.slice(2).map((item, index) => (
             <div key={index} className="hidden lg:block w-full">
-              <button
-                className="text-lg font-medium nav-font hover:bg-[#69BF06] transition-colors w-full rounded-full h-[60px]"
-                onClick={() =>
-                  scrollToSection(item.id === "form" ? "contact" : item.id)
-                }
-              >
-                {item.item}
-              </button>
+              <Link href={item.path}>
+                <button className="text-lg font-medium nav-font hover:bg-[#69BF06] transition-colors w-full rounded-full h-[60px]">
+                  {item.item}
+                </button>
+              </Link>
             </div>
           ))}
         </div>
       </div>
-      {/* Mobile version */}
+
       {isMenuOpen && (
         <div
           className="fixed inset-0 bg-black bg-opacity-60 z-40"
@@ -137,29 +122,33 @@ const NavBar: React.FC = () => {
           </div>
           <div className="flex flex-col gap-14 p-4">
             {items.map((item, index) => (
-              <div className="relative" key={index}>
-                <div
-                  className="bg-[#69BF06] absolute top-0 left-0 w-full h-full z-10 rounded-xl"
-                  ref={(el) => {
-                    menuItemsRef.current[index] = el;
-                  }}
-                ></div>
-                <button
-                  className="text-left border-gray-400 text-xl text-black border px-4 rounded-xl shadow-lg py-1 font-regular bg-white w-full"
-                  onClick={() => toggleMenu(item.id.toLowerCase())}
-                >
-                  {item.item}
-                </button>
-              </div>
+              <Link href={item.path} key={index}>
+                <div className="relative">
+                  <div
+                    className="bg-[#69BF06] absolute top-0 left-0 w-full h-full z-10 rounded-xl"
+                    ref={(el) => {
+                      menuItemsRef.current[index] = el;
+                    }}
+                  ></div>
+                  <button
+                    className="text-left border-gray-400 text-xl text-black border px-4 rounded-xl shadow-lg py-1 font-regular bg-white w-full"
+                    onClick={() => toggleMenu()}
+                  >
+                    {item.item}
+                  </button>
+                </div>
+              </Link>
             ))}
           </div>
           <div className="p-4">
-            <button
-              className="w-full bg-[#69BF06] border border-gray-300 py-3 rounded-xl text-lg font-regular text-white font-regular hover:border-[#69BF06] hover:bg-white hover:text-[#69BF06] transition duration-300"
-              onClick={() => toggleMenu("form")}
-            >
-              Contact
-            </button>
+            <Link href="/ContactUs">
+              <button
+                className="w-full bg-[#69BF06] border border-gray-300 py-3 rounded-xl text-lg font-regular text-white font-regular hover:border-[#69BF06] hover:bg-white hover:text-[#69BF06] transition duration-300"
+                onClick={() => toggleMenu()}
+              >
+                Contact
+              </button>
+            </Link>
           </div>
         </div>
       </div>
