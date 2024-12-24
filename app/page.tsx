@@ -1,5 +1,4 @@
 
-import Expandable from "@/components/Expandable";
 import NewSlider from "@/components/NewSlider";
 
 export default function Home() {
