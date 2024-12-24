@@ -18,15 +18,12 @@
   /* Custom Navigation Arrows */
 .swiper-button-next,
 .swiper-button-prev {
-  color: #57a704; /* Green color for navigation arrows */
+  color: #69BF06; /* Green color for navigation arrows */
   font-weight: bold;
   transition: color 0.3s ease;
 }
 
-.swiper-button-next:hover,
-.swiper-button-prev:hover {
-  color: #57a704; /* Darker green on hover */
-}
+
 
 /* Custom Pagination Bullets */
 .swiper-pagination-bullet {
@@ -36,7 +33,7 @@
 }
 
 .swiper-pagination-bullet-active {
-  background-color: #57a704; /* Active bullet green color */
+  background-color: #69BF06; /* Active bullet green color */
 }
 
 
