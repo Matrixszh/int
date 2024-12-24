@@ -50,7 +50,7 @@ const NewComponent = () => {
     }, [api])
 
     return (
-        <div className="w-[70%] flex items-start justify-between border-b-2 border-green-300 gap-4 m-4 p-4">
+        <div className="w-[70%] flex items-start justify-between border-b-2 border-[#69BF06] gap-4 m-4 p-4">
             <div className="flex flex-col gap-4 w-1/2">
                 <h1 className="text-4xl">Title</h1>
                 <p className="text-2xl">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, veniam architecto. Perspiciatis placeat, dicta dolor ad in accusantium ratione nam delectus, accusamus eum quae minima reprehenderit! Placeat non unde accusantium libero pariatur nihil dolore enim dolores, aperiam commodi illum impedit.</p>
@@ -85,7 +85,7 @@ const NewComponent = () => {
                                 onClick={() => api?.scrollTo(index)}
                                 className={`w-2 h-2 rounded-full transition-colors ${
                                     current === index 
-                                        ? 'bg-green-700' 
+                                        ? 'bg-[#69BF06]' 
                                         : 'bg-green-300'
                                 }`}
                             />

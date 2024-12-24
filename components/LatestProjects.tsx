@@ -59,10 +59,10 @@ const LatestProjects: React.FC = () => {
   return (
     <section id="#" className="py-16 px-5 sm:px-10 lg:px-20 text-center">
       <div className="max-w-7xl mx-auto">
-        <h1 className="text-3xl text-[#69BF06] sm:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight">
+        <h1 className="text-3xl text-[#69BF06] sm:text-4xl lg:text-5xl xl:text-6xl font-medium ">
           Our
         </h1>
-        <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight">
+        <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-medium ">
           Portfolio
         </h1>
 
