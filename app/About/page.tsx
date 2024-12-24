@@ -47,10 +47,7 @@ export default function Home() {
         id="about_paragraph"
       >
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl font-bold text-[#63AB38] mb-6">
-            Who We Are
-          </h2>
-          <p className="text-lg leading-relaxed">
+          <p className="lg:text-2xl text-lg leading-relaxed">
           Welcome to HARSH INTERIOR, your trusted partner in delivering comprehensive and exceptional turn-key contract solutions. With a legacy of excellence and decades of combined experience, we are dedicated to transforming your vision into reality. Our expertise spans a diverse range of sectors, including commercial, residential, and industrial projects, where we consistently deliver outcomes that surpass expectations.
 
 At HARSH INTERIOR, we take pride in our holistic approach, managing projects seamlessly from concept to completion. Our team of highly skilled architects, engineers, designers, and tradespeople collaborates to ensure every project is executed with precision, innovation, and efficiency. Whether it’s creating stunning residential spaces, cutting-edge commercial environments, or robust industrial facilities, we handle every detail with utmost care and professionalism.
