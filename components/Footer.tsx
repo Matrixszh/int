@@ -27,8 +27,8 @@ const Footer: React.FC = () => {
         <div className="flex flex-col md:flex-row items-center space-y-2 md:space-y-0 md:space-x-6">
           {/* Contact Details */}
           <div className="text-sm text-gray-300 text-center md:text-left">
-            <p>+123456789</p>
-            <p>harshint@gmail.com</p>
+            <p>+91 90300 90101</p>
+            <p>Harshinterior3@gmail.com</p>
           </div>
 
           {/* Social Media Icons */}
